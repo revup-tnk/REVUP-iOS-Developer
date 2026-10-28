@@ -120,26 +120,6 @@ end
 - Version이 상이할 경우 Initialize시 Log를 통해 확인 가능<br/>
 <br/>
 ![AdapterChecked](https://github.com/user-attachments/assets/a9530953-9cca-4eed-9ff9-efc12eacaec9)<br/>
-
-<br/>
-<details>
-<summary>Xcode 27 이상 추가 설치 방법</summary>
-<div markdown="1">  
-
-- Podfile 파일 가장 끝에 추가 후 pod install 실행
-```ruby
-post_install do |installer|
-  installer.pods_project.targets.each do |target|
-    target.build_configurations.each do |config|
-      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.0'
-    end
-  end
-end
-```
-
-</div>
-</details>
-
 <br/>
 
 #### C. Pod Install
